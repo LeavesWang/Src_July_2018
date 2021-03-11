@@ -781,8 +781,8 @@ void Root2Ana()
 									isShift[i][j] = false;
 									if (abs(ana.tD[0][i][j]) > 0 && abs(ana.tD[2][i][j]) > 0)
 									{
-										// for (k = 0; k < 1; k++) // For the most statistic peak (k=0)
-										for (k = 0; k < 3; k++)  // For all peaks
+										for (k = 0; k < 1; k++) // For the most statistic peak (k=0)
+																// for (k = 0; k < 3; k++)  // For all peaks
 											if (abs(tDifRang[i][j][k][1]) > 0 && abs(tDifRang[i][j][k][2]) > 0 && (ana.tD[0][i][j] - ana.tD[2][i][j]) > tDifRang[i][j][k][1] && (ana.tD[0][i][j] - ana.tD[2][i][j]) < tDifRang[i][j][k][2])
 											{
 												isShift[i][j] = true;
@@ -803,7 +803,7 @@ void Root2Ana()
 										ana.tof[0] += ana.tD[0][j][i];
 										k++;
 									}
-							if(k==16)
+							if (k == 16)
 								ana.tof[0] /= k;
 							else
 								ana.tof[0] = 0;
